@@ -1,0 +1,2 @@
+INSERT INTO pizze (prezzo,descrizione,foto,nome) VALUES(4.5, 'pizza molto buona', 'https://images.pexels.com/photos/6605214/pexels-photo-6605214.jpeg', 'Margherita');
+INSERT INTO pizze (prezzo,descrizione,foto,nome) VALUES(6.5, 'pizza gourmet', 'https://images.pexels.com/photos/8266151/pexels-photo-8266151.jpeg?auto=compress&cs=tinysrgb&w=600', 'pizza con il salame');

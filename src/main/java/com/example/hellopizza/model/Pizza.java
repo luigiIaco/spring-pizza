@@ -14,11 +14,12 @@ public class Pizza {
     private String foto;
     private BigDecimal prezzo;
 
-    public Pizza(String nome, String descrizione, String foto, BigDecimal prezzo) {
-        this.nome = nome;
-        this.descrizione = descrizione;
-        this.foto = foto;
-        this.prezzo = prezzo;
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -53,3 +54,6 @@ public class Pizza {
         this.prezzo = prezzo;
     }
 }
+
+
+
