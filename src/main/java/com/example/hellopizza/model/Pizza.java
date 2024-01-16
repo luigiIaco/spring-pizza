@@ -21,7 +21,7 @@ public class Pizza {
     private String descrizione;
     private String foto;
 
-    private BigDecimal prezzo;
+    private int prezzo;
     private LocalDate createdAt;
 
     public Integer getId() {
@@ -56,11 +56,11 @@ public class Pizza {
         this.foto = foto;
     }
 
-    public BigDecimal getPrezzo() {
+    public int getPrezzo() {
         return prezzo;
     }
 
-    public void setPrezzo(BigDecimal prezzo) {
+    public void setPrezzo(int prezzo) {
         this.prezzo = prezzo;
     }
 
