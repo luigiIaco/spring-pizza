@@ -30,6 +30,20 @@ public class PizzaController {
         return "list";
     }
 
+    @GetMapping("/search")
+    public String index(@RequestParam(name = "keyword", required = false) String searchKeyword,
+                        Model model) {
+        List<Pizza> pizzaList;
+        if (searchKeyword != null) {
+            pizzaList = pizzaRepository.findByNomeContaining(searchKeyword);
+        } else {
+            pizzaList = pizzaRepository.findAll();
+        }
+        model.addAttribute("pizzaList", pizzaList);
+        model.addAttribute("preloadSearch", searchKeyword);
+        return "list";
+    }
+
     @GetMapping("/lista/{id}")
     public String index_due(@PathVariable Integer id,Model model) {
         Optional<Pizza> result = pizzaRepository.findById(id);

@@ -1,0 +1,10 @@
+body {
+background-image:url('https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+background-size:cover;
+}
+
+.add{
+position:relative;
+top:200px;
+left:45%;
+}

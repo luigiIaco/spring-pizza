@@ -6,6 +6,7 @@ import jakarta.validation.constraints.Size;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name="pizze")
@@ -21,8 +22,14 @@ public class Pizza {
     private String descrizione;
     private String foto;
 
-    private int prezzo;
+    private BigDecimal prezzo;
     private LocalDate createdAt;
+    @OneToMany(mappedBy = "pizza")
+    private List<Offerta> offerte;
+
+
+
+
 
     public Integer getId() {
         return id;
@@ -56,11 +63,11 @@ public class Pizza {
         this.foto = foto;
     }
 
-    public int getPrezzo() {
+    public BigDecimal getPrezzo() {
         return prezzo;
     }
 
-    public void setPrezzo(int prezzo) {
+    public void setPrezzo(BigDecimal prezzo) {
         this.prezzo = prezzo;
     }
 
@@ -70,6 +77,14 @@ public class Pizza {
 
     public void setCreatedAt(LocalDate createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public List<Offerta> getOfferte() {
+        return offerte;
+    }
+
+    public void setOfferte(List<Offerta> offerte) {
+        this.offerte = offerte;
     }
 }
 
